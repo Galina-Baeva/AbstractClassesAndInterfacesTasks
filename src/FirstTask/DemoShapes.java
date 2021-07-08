@@ -16,7 +16,7 @@ public class DemoShapes {
         Square square = new Square();
         System.out.println("Area = " + square.getArea());
         System.out.println("Perimeter = " + square.getPerimeter());
-        System.out.println("(" + x + ", " + y + ") inside of Squere: " + square.isInside(x, y));
+        System.out.println("(" + x + ", " + y + ") inside of Square: " + square.isInside(x, y));
 
     }
 }
