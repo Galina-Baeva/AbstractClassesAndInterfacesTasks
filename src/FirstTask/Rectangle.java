@@ -1,38 +1,38 @@
 package FirstTask;
 
 public class Rectangle extends Shape {
-    double width;
-    double length;
+    protected double width;
+    protected double length;
 
-    protected Rectangle() {
+    public Rectangle() {
         super();
         width = 1.0;
         length = 1.0;
     }
-    protected Rectangle(double width, double length){
+    public Rectangle(double width, double length){
         super();
         this.width = width;
         this.length = length;
     }
-    protected Rectangle (double width, double length, String colour, boolean filled){
+    public Rectangle (double width, double length, String colour, boolean filled){
         super(colour, filled);
         this.width = width;
         this.length = length;
     }
 
-    private double getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    private void setWidth(double width) {
+    public void setWidth(double width) {
         this.width = width;
     }
 
-    private double getLength() {
+    public double getLength() {
         return length;
     }
 
-    private void setLength(double length) {
+    public void setLength(double length) {
         this.length = length;
     }
 
@@ -42,17 +42,17 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    protected double getArea() {
+    public double getArea() {
         return width * length;
     }
 
     @Override
-    protected double getPerimeter() {
+    public double getPerimeter() {
         return 2 * width + 2 * length;
     }
 
     @Override
-    protected boolean isInside(double x, double y) {
+    public boolean isInside(double x, double y) {
         return -width <= 2 * x && 2 * x <= width && -length <= 2 * y && 2 * y <= length;
     }
 }

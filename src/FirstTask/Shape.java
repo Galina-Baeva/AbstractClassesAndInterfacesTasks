@@ -1,37 +1,37 @@
 package FirstTask;
 
 public abstract class Shape {
-    protected String colour;
-    protected boolean filled;
+    public String colour;
+    public boolean filled;
 
-    protected Shape() {
+    public Shape() {
         colour = "green";
         filled = true;
     }
-    protected Shape(String colour, boolean filled) {
+    public Shape(String colour, boolean filled) {
         this.colour = colour;
         this.filled = filled;
     }
 
-    protected String getColour() {
+    public String getColour() {
         return colour;
     }
 
-    protected void setColour(String colour) {
+    public void setColour(String colour) {
         this.colour = colour;
     }
 
-    protected boolean isFilled() {
+    public boolean isFilled() {
         return filled;
     }
 
-    protected void setFilled(boolean filled) {
+    public void setFilled(boolean filled) {
         this.filled = filled;
     }
     public String toString(){
         return "A Shape with the colour of " + colour + (filled ? " filled" : " Not filled");
     }
-    protected abstract double getArea();
-    protected abstract double getPerimeter();
-    protected abstract boolean isInside(double x, double y);
+    public abstract double getArea();
+    public abstract double getPerimeter();
+    public abstract boolean isInside(double x, double y);
 }

@@ -1,43 +1,43 @@
 package FirstTask;
 
  public class Circle extends Shape {
-    final double pi = 3.14;
-    double radius;
+    private final double pi = 3.14;
+    protected double radius;
 
-    protected Circle() {
+    public Circle() {
         super();
         radius = 1.0;
     }
 
-    protected Circle(double radius) {
+    public Circle(double radius) {
         super();
         this.radius = radius;
     }
 
-    protected Circle(double radius, String colour, boolean filled) {
+    public Circle(double radius, String colour, boolean filled) {
         super(colour, filled);
         this.radius = radius;
     }
 
-    private double getRadius() {
+    public double getRadius() {
         return radius;
     }
 
-    private void setRadius(double radius) {
+    public void setRadius(double radius) {
         this.radius = radius;
     }
 
-    protected double getArea() {
+    public double getArea() {
         return pi * radius * radius;
     }
 
      @Override
-     protected double getPerimeter() {
+     public double getPerimeter() {
          return 2 * pi * radius;
      }
 
      @Override
-     protected boolean isInside(double x, double y) {
+     public boolean isInside(double x, double y) {
         return Math.sqrt(x * x + y * y) <= radius;
      }
 
